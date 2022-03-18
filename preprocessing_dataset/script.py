@@ -1,9 +1,8 @@
-# train data pre-processing
+# preprocessing ml dataset
 
 from subprocess import call
 import sys
 import os
-import shutil
 
 # pwd setting
 pwd = os.getcwd()
@@ -18,7 +17,7 @@ max_class = input('Input max class number : ')
 
 print('-------------------------------------------------')
 print('|     * check yourself about multi-label *      |')
-print('| base label setting : person (0) / vehicle (7) |')
+print('| base label setting : person (0) / vehicle (5) |')
 print('-------------------------------------------------')
 
 check_base_label = input('=> Is it OK? [Y/N] :')
@@ -49,10 +48,10 @@ print('[ masking smallbox ]')
 cmd = 'python masking_smallbox.py ' + dataset_path
 call(cmd, shell=True)
 
-# 2. image masking & remove masking index
-print('[ image masking ]')
-cmd = 'python remove_masking_new.py ' + dataset_path
-call(cmd, shell=True)
+# # 2. image masking & remove masking index
+# print('[ image masking ]')
+# cmd = 'python remove_masking_new.py ' + dataset_path
+# call(cmd, shell=True)
 
 # 3. check out of lable number
 print('[ check out of lable number ]')

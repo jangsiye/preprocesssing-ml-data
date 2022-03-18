@@ -12,10 +12,10 @@ This scripts is based on the YOLO format.
 2. Input the dataset root path and the maximum class number.
 
 - 기능  
-- script.py : comprehensive script for examining datasets prior to learning
-- out_of_index.py : check for labels that are out of the maximum class number.
-- pair_files.py : check the pairings of the image and the annotation file match.
-- remove_overlap.py : remove duplicate labels. 
-- check_base_label.py : check the existence of a base label in a multi-labeled annotation.
+- script.py : checking the suitability of a dataset
+- out_of_index.py : checking for labels that are out of the maximum class number.
+- pair_files.py : checking the pairings of the image and the annotation file match.
+- remove_overlap.py : removing duplicate labels. 
+- check_base_label.py : checking the existence of a base label in a multi-labeled annotation.
 - masking_smallbox.py : If the box is too small, change the label to 99 (99 is masking label)
-- count_box.py : outputs dataset information.
+- count_box.py : output dataset information.
